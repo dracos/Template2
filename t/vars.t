@@ -634,3 +634,8 @@ testing&lt;3&gt;
 [% monkey = "testing<4>" FILTER html IF 1; monkey %]
 -- expect --
 testing&lt;4&gt;
+
+-- test --
+[% testing="initial"; SET testing="changed" IF 0; testing %]
+-- expect --
+initial
